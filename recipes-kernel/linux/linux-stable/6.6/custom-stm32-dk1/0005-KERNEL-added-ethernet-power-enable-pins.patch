@@ -1,0 +1,26 @@
+diff --git a/arch/arm/boot/dts/st/stm32mp15xx-dkx.dtsi b/arch/arm/boot/dts/st/stm32mp15xx-dkx.dtsi
+index d4a1018477c1..df49facefc7e 100644
+--- a/arch/arm/boot/dts/st/stm32mp15xx-dkx.dtsi
++++ b/arch/arm/boot/dts/st/stm32mp15xx-dkx.dtsi
+@@ -144,9 +144,20 @@ &dts {
+ 	status = "okay";
+ };
+ 
++&pinctrl
++{
++	ethernet0_power_enable_pins: power-enable-0 {
++    	    power_enable {
++    	        pinmux = <STM32_PINMUX('E', 5, GPIO_ACTIVE_HIGH)>; /* PE5 as GPIO, High */
++    	        output-high; // This ensures the pin starts in a high state
++    	        bias-disable;
++    	    };
++	};
++};
++
+ &ethernet0 {
+ 	status = "okay";
+-	pinctrl-0 = <&ethernet0_rgmii_pins_a>;
++	pinctrl-0 = <&ethernet0_rgmii_pins_a> , <&ethernet0_power_enable_pins>;
+ 	pinctrl-1 = <&ethernet0_rgmii_sleep_pins_a>;
+ 	pinctrl-names = "default", "sleep";
+ 	phy-mode = "rgmii-id";
