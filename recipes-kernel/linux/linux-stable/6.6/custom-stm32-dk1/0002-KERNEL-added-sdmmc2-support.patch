@@ -1,9 +1,9 @@
 diff --git a/arch/arm/boot/dts/st/stm32mp15-pinctrl.dtsi b/arch/arm/boot/dts/st/stm32mp15-pinctrl.dtsi
-index ae83e7b10232..f079b410bb75 100644
+index 098153ee99a3..d85b2db2f238 100644
 --- a/arch/arm/boot/dts/st/stm32mp15-pinctrl.dtsi
 +++ b/arch/arm/boot/dts/st/stm32mp15-pinctrl.dtsi
-@@ -2054,8 +2054,8 @@ pins {
- 	/omit-if-no-ref/
+@@ -1796,8 +1796,8 @@ pins {
+ 
  	sdmmc2_b4_pins_a: sdmmc2-b4-0 {
  		pins1 {
 -			pinmux = <STM32_PINMUX('B', 14, AF9)>, /* SDMMC2_D0 */
@@ -13,8 +13,8 @@ index ae83e7b10232..f079b410bb75 100644
  				 <STM32_PINMUX('B', 3, AF9)>, /* SDMMC2_D2 */
  				 <STM32_PINMUX('B', 4, AF9)>, /* SDMMC2_D3 */
  				 <STM32_PINMUX('G', 6, AF10)>; /* SDMMC2_CMD */
-@@ -2074,8 +2074,8 @@ pins2 {
- 	/omit-if-no-ref/
+@@ -1815,8 +1815,8 @@ pins2 {
+ 
  	sdmmc2_b4_od_pins_a: sdmmc2-b4-od-0 {
  		pins1 {
 -			pinmux = <STM32_PINMUX('B', 14, AF9)>, /* SDMMC2_D0 */
@@ -24,19 +24,19 @@ index ae83e7b10232..f079b410bb75 100644
  				 <STM32_PINMUX('B', 3, AF9)>, /* SDMMC2_D2 */
  				 <STM32_PINMUX('B', 4, AF9)>; /* SDMMC2_D3 */
  			slew-rate = <1>;
-@@ -2099,8 +2099,8 @@ pins3 {
- 	/omit-if-no-ref/
+@@ -1839,8 +1839,8 @@ pins3 {
+ 
  	sdmmc2_b4_sleep_pins_a: sdmmc2-b4-sleep-0 {
  		pins {
 -			pinmux = <STM32_PINMUX('B', 14, ANALOG)>, /* SDMMC2_D0 */
 -				 <STM32_PINMUX('B', 15, ANALOG)>, /* SDMMC2_D1 */
-+			pinmux = <STM32_PINMUX('E', 6, AF7)>, /* SDMMC2_D0 */
-+				 <STM32_PINMUX('B', 7, AF10)>, /* SDMMC2_D1 */
++			pinmux = <STM32_PINMUX('E', 6, ANALOG)>, /* SDMMC2_D0 */
++				 <STM32_PINMUX('B', 7, ANALOG)>, /* SDMMC2_D1 */
  				 <STM32_PINMUX('B', 3, ANALOG)>, /* SDMMC2_D2 */
  				 <STM32_PINMUX('B', 4, ANALOG)>, /* SDMMC2_D3 */
  				 <STM32_PINMUX('E', 3, ANALOG)>, /* SDMMC2_CK */
 diff --git a/arch/arm/boot/dts/st/stm32mp15xx-dkx.dtsi b/arch/arm/boot/dts/st/stm32mp15xx-dkx.dtsi
-index 88e8c5952bfa..0b734be95e9f 100644
+index 83f6eac584bf..84a0757a40f3 100644
 --- a/arch/arm/boot/dts/st/stm32mp15xx-dkx.dtsi
 +++ b/arch/arm/boot/dts/st/stm32mp15xx-dkx.dtsi
 @@ -465,7 +465,7 @@ &ltdc {
@@ -48,7 +48,7 @@ index 88e8c5952bfa..0b734be95e9f 100644
  
  	port {
  		ltdc_ep0_out: endpoint {
-@@ -554,6 +554,22 @@ &sdmmc1 {
+@@ -553,6 +553,22 @@ &sdmmc1 {
  	status = "okay";
  };
  

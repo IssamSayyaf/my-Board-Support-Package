@@ -1,5 +1,5 @@
 diff --git a/configs/stm32mp15_basic_defconfig b/configs/stm32mp15_basic_defconfig
-index 005f1d55f8..b41bc1f6fd 100644
+index 6df0935240..a804111d37 100644
 --- a/configs/stm32mp15_basic_defconfig
 +++ b/configs/stm32mp15_basic_defconfig
 @@ -191,3 +191,4 @@ CONFIG_ERRNO_STR=y

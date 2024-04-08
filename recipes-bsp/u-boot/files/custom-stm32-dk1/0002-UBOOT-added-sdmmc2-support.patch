@@ -36,7 +36,7 @@ index 098153ee99..d85b2db2f2 100644
  				 <STM32_PINMUX('B', 4, ANALOG)>, /* SDMMC2_D3 */
  				 <STM32_PINMUX('E', 3, ANALOG)>, /* SDMMC2_CK */
 diff --git a/arch/arm/dts/stm32mp15xx-dkx.dtsi b/arch/arm/dts/stm32mp15xx-dkx.dtsi
-index 855a682619..4929904f0d 100644
+index 83f6eac584..84a0757a40 100644
 --- a/arch/arm/dts/stm32mp15xx-dkx.dtsi
 +++ b/arch/arm/dts/stm32mp15xx-dkx.dtsi
 @@ -465,7 +465,7 @@
@@ -48,7 +48,7 @@ index 855a682619..4929904f0d 100644
  
  	port {
  		ltdc_ep0_out: endpoint {
-@@ -554,6 +554,22 @@
+@@ -553,6 +553,22 @@
  	status = "okay";
  };
  
